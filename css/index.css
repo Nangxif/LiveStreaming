@@ -1,0 +1,875 @@
+@font-face {
+	font-family: 'Source-Han-Norm';
+	src: url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.gif?r=83905389627');
+	src: url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.gif?r=83905389627?#iefix') format('embedded-opentype'),
+	url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.png?r=83905389627') format('woff2'),
+	url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.bmp?r=83905389627') format('woff'),
+	url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.jpg?r=83905389627') format('truetype');
+}
+*{
+	padding: 0px;
+	margin: 0px; 
+	font-family: "Source-Han-Norm";
+}
+body{
+	line-height: normal !important;
+	background-color: white !important;
+}
+/*pc端*/
+#pc{
+	margin-top: 85px;
+	width: 100%;
+	min-width: 768px;
+	background-image: url('../images/pc/bg.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.pccontent{
+	margin: 0 auto;
+	width: 66.719%;
+}
+.redtitle{
+	margin-bottom: 0px;
+	color: #e60012;
+	font-size: 40px;
+	height: 42px;
+	line-height: 42px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.redtitle:after{
+	content: "     ...................................................................................................................................................................................";
+	display: inline;
+	color: #dcdcdc;
+	font-size: 20px;
+	vertical-align: text-top;
+}
+.icons{
+	display: inline-block;
+	width: 3%;
+	margin-right: 1.249%;
+	margin-top: -0.6%;
+	vertical-align: middle;
+}
+
+
+
+.peopletitl{
+	padding-top: 30.757%;
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	color:#3e3e3e;
+}
+/*人数统计*/
+#people{
+	margin-top: 0.824%;
+	margin-bottom: 4.6863%;
+	display: flex;
+	justify-content:center;
+}
+.pox{
+	display: inline-block;
+	width: 100px;
+	height: 146px;
+	font-size: 104px;
+	text-align: center;
+	background-image: url('../images/pc/2.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: white;
+	font-weight: 600;
+}
+.poxs{
+	position: relative;
+	margin-top: 22px;
+	width: 100%;
+	height: 102px;
+	line-height: 102px;
+	text-align: center;
+	color: white;
+	font-weight: 600;
+	border-right:1px solid #c25055;
+	overflow: hidden;
+}
+.poxsList{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 99px;
+	height: 1020px;
+	line-height: 102px;
+	color: white;
+	font-weight: 600;
+	font-size: 104px;
+	word-wrap:break-word; 
+	word-break:normal;
+}
+#people .pox:first-child .poxsList{
+	left: 18%;
+}
+#people .pox:first-child,#people .pox:last-child{
+	width: 124px;
+}
+#people .pox:first-child{
+	background-image: url('../images/pc/1.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#people .pox:last-child{
+	background-image: url('../images/pc/3.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#people .pox:last-child .poxs{
+	border-right:0px;
+}
+
+
+
+
+
+
+/*选择列表*/
+.itemList{
+	margin-top: 1.098%;
+	border-left: 1px solid #dadada;
+	overflow: hidden;
+}
+.nav-tabs{
+	border-bottom:0px !important;
+}
+.nav-tabs>li>a{
+	color: #595959 !important;
+	border:0px !important;
+	border-radius:0px !important;
+	font-size: 30px;
+	text-align: center;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	color: #c1c1c1 !important;
+	border:0px !important;
+}
+.nav-tabs>li>a:hover{
+	background-color: white !important;
+}
+.smallitem{
+	margin-top: 2.5%;
+	width: 100%;
+}
+.smallitem li{
+	float: left;
+	margin: 0.5% 1.2%;
+	padding: 2px 1.6%;
+	font-size: 22px;
+	color: #c1c1c1;
+	cursor: pointer;
+}
+.itemactive{
+	background-color: #f50000;
+	color: white !important;
+	border-radius: 26px;
+}
+
+
+
+
+
+.classList{
+	margin: 0 auto;
+	margin-top: 5%;
+	width: 91.6471%;
+	border: 2px solid #f50000;
+}
+.classList tr{
+	height: 57px;
+}
+.classList th{
+	background-color: rgba(247,110,110,0.2);
+	color: #252525;
+	font-size:26px;
+	text-align: center;
+}
+.classList td{
+	border:1px solid #fdc2c2;
+	text-align: center;
+	color: #252525;
+	font-size: 18px;
+}
+.tabps{
+	margin: 0 auto;
+	margin-top: 2%;
+	margin-bottom: 5%;
+	width: 91.6471%;
+	font-size: 18px;
+	color: #505050;
+}
+/*步骤*/
+.way1{
+	margin-top: 5%;
+	margin-bottom: 5.4%;
+	margin-left: 4.3%;
+	color: #212121;
+	font-size: 24px;
+}
+.way1detail{
+	margin-left: 57px;
+	width: 77.6737%;
+}
+.way1details{
+	display: flex;
+	width: 100%;
+}
+.way1detailleft{
+	flex: 1.231;
+	box-sizing: border-box;
+}
+.way1detailleftimg{
+	margin-left: 18.579%;
+	margin-bottom: 8.6%;
+	width: 81.421%;
+}
+.way1detailright{
+	flex: 1;
+}
+.way1detailrightimg{
+	width: 100%;
+	margin-bottom: 8.6%;
+}
+.way1textleft{
+	margin-left: 28.0657%;/*43.0657%*/
+	margin-top: 24.842%;
+	line-height: 45px;
+	font-size: 20px;
+	vertical-align: middle;
+}
+.way1textright{
+	margin-left:10.568%;/*18.568%*/
+	margin-top: 30.842%;
+	line-height: 45px;
+	font-size: 20px;
+	vertical-align: middle;
+}
+.wayicon{
+	margin-right: 4%;
+	display: inline-block;
+	width: 45px;
+	height:45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	color: white;
+	background-color: #e60012;
+	font-size: 30px;
+}
+.way2{
+	margin-bottom: 5.5%;
+	margin-left: 4.3%;
+	color: #212121;
+	font-size: 24px;
+}
+.way2detail{
+	margin: 0 auto;
+	margin-bottom: 5.5%;
+	display: block;
+	width: 39.628%;
+}
+
+
+@media screen and (max-width:2018px) and (min-width:1921px){
+	.redtitle{
+		font-size: 42px;
+		height: 44px;
+		line-height: 44px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 132px;
+	}
+	.pox{
+		width: 107px;
+		height: 156px;
+	}
+	.poxs{
+		margin-top:23px;
+		height: 108px;
+		line-height: 108px;
+	}
+	.poxsList{
+		width: 106px;
+		font-size: 110px;
+		height: 1080px;
+		line-height: 108px;
+	}
+	.peopletitl{
+		font-size: 32px;
+	}
+	.nav-tabs>li>a{
+		font-size: 32px;
+	}
+	.smallitem li{
+		font-size: 23px;
+	}
+	.classList th{
+		font-size: 28px;
+	}
+	.classList td{
+		font-size: 20px;
+	}
+	.tabps{
+		font-size: 20px;
+	}
+	.way1,.way2{
+		font-size: 25px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 21px;
+	}
+	.wayicon{
+		width: 47px;
+		height: 47px;
+		line-height: 47px;
+		font-size: 32px;
+	}
+}
+@media screen and (max-width:1920px) and (min-width:1780px){	
+	.redtitle{
+		font-size: 40px;
+		height: 42px;
+		line-height: 42px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 124px;
+	}
+	.pox{
+		width: 100px;
+		height: 146px;
+	}
+	.poxs{
+		margin-top:22px;
+		height: 102px;
+		line-height: 102px;
+	}
+	.poxsList{
+		width: 99px;
+		font-size: 104px;
+		height: 1020px;
+		line-height: 102px;
+	}
+	.peopletitl{
+		font-size: 30px;
+	}
+	.nav-tabs>li>a{
+		font-size: 30px;
+	}
+	.smallitem li{
+		font-size: 22px;
+	}
+	.classList th{
+		font-size: 26px;
+	}
+	.classList td{
+		font-size: 18px;
+	}
+	.tabps{
+		font-size: 18px;
+	}
+	.way1,.way2{
+		font-size: 24px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 20px;
+	}
+	.wayicon{
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+		font-size: 30px;
+	}
+}
+@media screen and (max-width:1779px) and (min-width:1620px){
+	.redtitle{
+		font-size: 38px;
+		height: 39px;
+		line-height: 39px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 114px;
+	}
+	.pox{
+		width: 93px;
+		height: 139px;
+	}
+	.poxs{
+		margin-top:21px;
+		height: 96px;
+		line-height: 96px;
+	}
+	.poxsList{
+		width: 92px;
+		font-size: 98px;
+		height: 960px;
+		line-height: 96px;
+	}
+	.peopletitl{
+		font-size: 29px;
+	}
+	.nav-tabs>li>a{
+		font-size: 29px;
+	}
+	.smallitem li{
+		font-size: 20px;
+	}
+	.classList th{
+		font-size: 24px;
+	}
+	.classList td{
+		font-size: 17px;
+	}
+	.tabps{
+		font-size: 17px;
+	}.way1,.way2{
+		font-size: 23px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 19px;
+	}
+	.wayicon{
+		width: 42px;
+		height: 42px;
+		line-height: 42px;
+		font-size: 32px;
+	}
+}
+@media screen and (max-width:1619px) and (min-width:1500px){
+	.redtitle{
+		font-size: 35px;
+		height: 36px;
+		line-height: 39px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 107px;
+	}
+	.pox{
+		width: 85px;
+		height: 130px;
+	}
+	.poxs{
+		margin-top:18px;
+		height: 90px;
+		line-height: 90px;
+	}
+	.poxsList{
+		width: 84px;
+		font-size: 92px;
+		height: 900px;
+		line-height: 90px;
+	}
+	.peopletitl{
+		font-size: 28px;
+	}
+	.nav-tabs>li>a{
+		font-size: 28px;
+	}
+	.smallitem li{
+		font-size: 19px;
+	}
+	.classList th{
+		font-size: 23px;
+	}
+	.classList td{
+		font-size: 16px;
+	}
+	.tabps{
+		font-size: 16px;
+	}.way1,.way2{
+		font-size: 22px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 18px;
+	}
+	.wayicon{
+		width: 39px;
+		height: 39px;
+		line-height: 39px;
+		font-size: 29px;
+	}
+}
+@media screen and (max-width:1499px) and (min-width:1324px){
+	.redtitle{
+		font-size: 32px;
+		height: 34px;
+		line-height: 34px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 100px;
+	}
+	.pox{
+		width: 77px;
+		height: 121px;
+	}
+	.poxs{
+		margin-top:17px;
+		height: 84px;
+		line-height: 84px;
+	}
+	.poxsList{
+		width: 76px;
+		font-size: 86px;
+		height: 840px;
+		line-height: 84px;
+	}
+	.peopletitl{
+		font-size: 26px;
+	}
+	.nav-tabs>li>a{
+		font-size: 26px;
+	}
+	.smallitem li{
+		font-size: 18px;
+	}
+	.classList th{
+		font-size: 21px;
+	}
+	.classList td{
+		font-size: 15px;
+	}
+	.tabps{
+		font-size: 15px;
+	}.way1,.way2{
+		font-size: 21px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 17px;
+	}
+	.wayicon{
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		font-size: 26px;
+	}
+}
+@media screen and (max-width:1323px) and (min-width:1201px){
+	.redtitle{
+		font-size: 29px;
+		height: 32px;
+		line-height: 32px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 92px;
+	}
+	.pox{
+		width: 69px;
+		height: 112px;
+	}
+	.poxs{
+		margin-top:16px;
+		height: 77px;
+		line-height: 77px;
+	}
+	.poxsList{
+		width: 68px;
+		font-size: 80px;
+		height: 770px;
+		line-height: 77px;
+	}
+	.peopletitl{
+		font-size: 24px;
+	}
+	.nav-tabs>li>a{
+		font-size: 24px;
+	}
+	.smallitem li{
+		font-size: 17px;
+	}
+	.classList th{
+		font-size: 19px;
+	}
+	.classList td{
+		font-size: 14px;
+	}
+	.tabps{
+		font-size: 14px;
+	}.way1,.way2{
+		font-size: 19px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 16px;
+	}
+	.wayicon{
+		width: 33px;
+		height: 33px;
+		line-height: 33px;
+		font-size: 23px;
+	}
+}
+@media screen and (max-width:1200px) and (min-width:1098px){
+	.redtitle{
+		font-size: 27px;
+		height: 29px;
+		line-height: 29px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 84px;
+	}
+	.pox{
+		width: 69px;
+		height: 90px;
+	}
+	.poxs{
+		margin-top:10px;
+		height: 70px;
+		line-height: 70px;
+	}
+	.poxsList{
+		width: 67px;
+		font-size: 75px;
+		height: 700px;
+		line-height: 70px;
+	}
+	.peopletitl{
+		font-size: 22px;
+	}
+	.nav-tabs>li>a{
+		font-size: 22px;
+	}
+	.smallitem li{
+		font-size: 16px;
+	}
+	.classList th{
+		font-size: 18px;
+	}
+	.classList td{
+		font-size: 13px;
+	}
+	.tabps{
+		font-size: 13px;
+	}.way1,.way2{
+		font-size: 17px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 15px;
+	}
+	.wayicon{
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 22px;
+	}
+}
+@media screen and (max-width:1097px) and (min-width:993px){
+	.redtitle{
+		font-size: 25px;
+		height: 27px;
+		line-height: 27px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 79px;
+	}
+	.pox{
+		width: 63px;
+		height: 83px;
+	}
+	.poxs{
+		margin-top:13px;
+		height: 63px;
+		line-height: 63px;
+	}
+	.poxsList{
+		width: 62px;
+		font-size: 70px;
+		height: 630px;
+		line-height: 63px;
+	}
+	.peopletitl{
+		font-size: 20px;
+	}
+	.nav-tabs>li>a{
+		font-size: 20px;
+	}
+	.smallitem li{
+		font-size: 15px;
+	}
+	.classList th{
+		font-size: 17px;
+	}
+	.classList td{
+		font-size: 13px;
+	}
+	.tabps{
+		font-size: 13px;
+	}.way1,.way2{
+		font-size: 16px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 14px;
+	}
+	.wayicon{
+		width: 28px;
+		height: 28px;
+		line-height: 28px;
+		font-size: 20px;
+	}
+}
+@media screen and (max-width:992px) and (min-width:852px){
+	.redtitle{
+		font-size: 23px;
+		height: 24px;
+		line-height: 24px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 71px;
+	}
+	.pox{
+		width: 61px;
+		height: 80px;
+	}
+	.poxs{
+		margin-top:12px;
+		height: 56px;
+		line-height: 56px;
+	}
+	.poxsList{
+		width: 58px;
+		font-size: 60px;
+		height: 560px;
+		line-height: 56px;
+	}
+	.peopletitl{
+		font-size: 18px;
+	}
+	.nav-tabs>li>a{
+		font-size: 18px;
+	}
+	.smallitem li{
+		font-size: 14px;
+	}
+	.classList th{
+		font-size: 15px;
+	}
+	.classList td{
+		font-size: 12px;
+	}
+	.tabps{
+		font-size: 12px;
+	}.way1,.way2{
+		font-size: 15px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 13px;
+	}
+	.wayicon{
+		width: 26px;
+		height: 26px;
+		line-height: 26px;
+		font-size: 18px;
+	}
+}
+@media screen and (max-width:851px) and (min-width:768px){
+	.redtitle{
+		font-size: 21px;
+		height: 22px;
+		line-height: 22px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 63px;
+	}
+	.pox{
+		width: 53px;
+		height: 70px;
+	}
+	.poxs{
+		margin-top:11px;
+		height: 49px;
+		line-height: 49px;
+	}
+	.poxsList{
+		width: 51px;
+		font-size: 53px;
+		height: 490px;
+		line-height: 49px;
+	}
+	.peopletitl{
+		font-size: 16px;
+	}
+	.nav-tabs>li>a{
+		font-size: 16px;
+	}
+	.smallitem li{
+		font-size: 13px;
+	}
+	.classList th{
+		font-size: 14px;
+	}
+	.classList td{
+		font-size: 12px;
+	}
+	.tabps{
+		font-size: 12px;
+	}.way1,.way2{
+		font-size: 14px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 12px;
+	}
+	.wayicon{
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		font-size: 16px;
+	}
+}
+@media screen and (max-width:767px){
+	.redtitle{
+		font-size: 19px;
+		height: 20px;
+		line-height: 20px;
+	}
+	#people .pox:first-child, #people .pox:last-child{
+		width: 55px;
+	}
+	.pox{
+		width: 45px;
+		height: 60px;
+	}
+	.poxs{
+		margin-top:10px;
+		height: 42px;
+		line-height: 42px;
+	}
+	.poxsList{
+		width: 44px;
+		font-size: 46px;
+		height: 420px;
+		line-height: 42px;
+	}
+	.peopletitl{
+		font-size: 14px;
+	}
+	.nav-tabs>li>a{
+		font-size: 14px;
+	}
+	.smallitem li{
+		font-size: 12px;
+	}
+	.classList th{
+		font-size: 13px;
+	}
+	.classList td{
+		font-size: 12px;
+	}
+	.tabps{
+		font-size: 12px;
+	}
+	.way1,.way2{
+		font-size: 13px;
+	}
+	.way1textleft,.way1textright{
+		font-size: 12px;
+	}
+	.wayicon{
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		font-size: 15px;
+	}
+}

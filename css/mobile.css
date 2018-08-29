@@ -1,0 +1,254 @@
+@font-face {
+	font-family: 'Source-Han-Norm';
+	src: url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.gif?r=83905389627');
+	src: url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.gif?r=83905389627?#iefix') format('embedded-opentype'),
+	url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.png?r=83905389627') format('woff2'),
+	url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.bmp?r=83905389627') format('woff'),
+	url('http://cdn.webfont.youziku.com/webfonts/nomal/121445/46863/5b860cedf629d8174469879d.jpg?r=83905389627') format('truetype');
+}
+*{
+	padding: 0px;
+	margin: 0px; 
+	font-family: "Source-Han-Norm";
+}
+body{
+	line-height: normal !important;
+	background-color: white !important;
+}
+/*pc端*/
+#mobile{
+	margin-top: 59px;
+	width: 100%;
+	background-image: url('../images/mobile/bg.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.mobilecontent{
+	width: 100%;
+}
+.redtitle{
+	margin-bottom: 0px;
+	color: #e60012;
+	font-size: 0.4rem;
+	height: 1.15rem;
+	line-height: 1.15rem;
+	background-color: rgb(239,239,239);
+}
+.icons{
+	display: inline-block;
+	width: 0.42rem;
+	height: 0.42rem;
+	margin-right: 0.16rem;
+	margin-left: 0.41rem;
+	vertical-align: text-top;
+}
+
+
+
+.peopletitl{
+	padding-top: 2.75rem;
+	width: 100%;
+	text-align: center;
+	font-size: 0.22rem;
+	color:#3e3e3e;
+}
+/*人数统计*/
+#peoples{
+	margin-top: 0.824%;
+	margin-bottom: 4.6863%;
+	display: flex;
+	justify-content:center;
+}
+.pox{
+	display: inline-block;
+	width: 0.62rem;
+	height: 0.87rem;
+	text-align: center;
+	background-image: url('../images/mobile/2.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: white;
+	font-weight: 600;
+}
+.poxs{
+	position: relative;
+	margin-top: 0.13rem;
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	text-align: center;
+	color: white;
+	font-weight: 600;
+	border-right:1px solid #c25055;
+	overflow: hidden;
+}
+.poxsList{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 0.61rem;
+	height: 6rem;
+	line-height: 0.6rem;
+	color: white;
+	font-weight: 600;
+	font-size: 0.56rem;
+	word-wrap:break-word; 
+	word-break:normal;
+}
+#peoples .pox:first-child .poxsList{
+	left: 18%;
+}
+#peoples .pox:first-child,#peoples .pox:last-child{
+	width: 0.71rem;
+}
+#peoples .pox:first-child{
+	background-image: url('../images/mobile/1.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#peoples .pox:last-child{
+	background-image: url('../images/mobile/3.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#peoples .pox:last-child .poxs{
+	border-right:0px;
+}
+
+
+
+
+
+
+/*选择列表*/
+.itemList{
+	margin-top: 1.098%;
+	overflow: hidden;
+}
+#myTab{
+	margin: 0 auto;
+	width: 6.68rem;
+	display: flex;
+}
+.nav-tabs{
+	border-bottom:0px !important;
+}
+.nav-tabs>li>a{
+	color: #595959 !important;
+	border:0px !important;
+	border-radius:0px !important;
+	font-size: 0.3rem;
+	text-align: center;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	color: white !important;
+	border:0px !important;
+	background-color: rgb(230,0,18) !important
+}
+.nav-tabs>li>a{
+	margin-right: 0px !important;
+}
+.nav-tabs>li>a:hover{
+	background-color: white !important;
+}
+.smallitem{
+	margin-top: 2.5%;
+	width: 100%;
+}
+.smallitem li{
+	float: left;
+	margin: 0.5% 1.2%;
+	padding: 2px 1.6%;
+	font-size: 22px;
+	color: #c1c1c1;
+	cursor: pointer;
+}
+.itemactive{
+	background-color: #f50000;
+	color: white !important;
+	border-radius: 26px;
+}
+
+
+
+
+
+.classList{
+	margin: 0 auto;
+	margin-top: 0.37rem;
+	width: 6.67rem;
+	border: 1px solid #f50000;
+}
+.classList tr{
+	height: 0.35rem;
+}
+.classList th{
+	background-color: rgba(247,110,110,0.2);
+	color: #252525;
+	font-size:0.15rem;
+	text-align: center;
+}
+.classList td{
+	border:1px solid #fdc2c2;
+	text-align: center;
+	color: #252525;
+	font-size: 0.15rem;
+}
+.tabps{
+	margin: 0 auto;
+	margin-top: 0.39rem;
+	margin-bottom: 0.37rem;
+	width: 6.67rem;
+	font-size: 0.15rem;
+	color: rgb(80,80,80);
+}
+/*步骤*/
+.way{
+	margin-top: 0.46rem;
+	margin-bottom:0.25rem;
+	width: 100%;
+	font-size: 0.3rem;
+	color: rgb(33,33,33);
+	text-align: center;
+}
+.ways{
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	width: 100%;
+	color: rgb(33,33,33);
+	font-size: 0.28rem;
+	text-align: center;
+}
+.waytext{
+	width: 100%;
+	margin-top: 0.45rem;
+	margin-bottom: 0.3rem;
+	height: 0.45rem;
+	line-height: 0.45rem;
+	text-align: center;
+}
+.wayicon{
+	margin-right: 0.09rem;
+	display: inline-block;
+	width: 0.45rem;
+	height: 0.45rem;
+	line-height: 0.45rem;
+	text-align: center;
+	border-radius: 50%;
+	color: white;
+	background-color: #e60012;
+	font-size: 0.3rem;
+}
+.wayimg{
+	display: block;
+	margin: 0 auto;
+	width: 4.46rem;
+	height: 3.15rem;
+}
+.way2detail{
+	margin: 0 auto;
+	margin-bottom: 5.5%;
+	display: block;
+	width: 39.628%;
+}
+
