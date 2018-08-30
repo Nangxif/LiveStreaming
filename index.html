@@ -24,6 +24,8 @@
 	<!-- 全局样式结束 -->
 	<!-- page页面样式 -->
 	<link rel="stylesheet" href="http://www.readboy.com/statics/css/css/product.css">
+	<!-- H5 播放器 -->
+	<link rel="stylesheet" type="text/css" href="https://g.alicdn.com/de/prismplayer/2.7.2/skins/default/aliplayer-min.css"/>
 	<!-- page页面样式结束 -->
 	<!--[if lt IE 7]>
 	<script src="http://www.readboy.com/statics/js/js/plugins/versiontips.js"></script>
@@ -32,6 +34,7 @@
 	<script src="http://www.readboy.com/statics/js/js/plugins/html5shiv.js"></script>
 	<script src="http://www.readboy.com/statics/js/js/plugins/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.7.2/aliplayer-h5-min.js"></script>
 	<script type="text/javascript" src="./js/whichmachine.js"></script>
 	<script type="text/javascript">
 	document.ondragstart = function() {
@@ -527,35 +530,32 @@
 				</p>
 				<div class="itemList">
 					<ul id="myTab" class="nav nav-tabs">
-						<li class="active" style="flex: 1;"><a href="#chinese" data-toggle="tab">语文</a></li>
-						<li style="flex: 1;"><a href="#math" data-toggle="tab">数学</a></li>
-						<li style="flex: 1;"><a href="#english" data-toggle="tab">英语</a></li>
-						<li style="flex: 1.2;"><a href="#interest" data-toggle="tab">趣味课程</a></li>
+						<li class="active" style="flex: 1;"><a href="#chineses" data-toggle="tab" class="hasLevel">语文</a></li>
+						<li style="flex: 1;"><a href="#maths" data-toggle="tab" class="hasLevel">数学</a></li>
+						<li style="flex: 1;"><a href="#englishs" data-toggle="tab" class="hasLevel">英语</a></li>
+						<li style="flex: 1.2;"><a href="#interests" data-toggle="tab" class="noLevel">趣味课程</a></li>
 					</ul>
+					<div class="choosewhich"><span class="chooselevel">一年级</span><span class="chooseicon">+</span></div>
 					<ul class="smallitem">
-						<li class="itemactive">一年级</li>
-						<li>二年级</li>
-						<li>三年级</li>
-						<li>四年级</li>
-						<li>五年级</li>
-						<li>六年级</li>
-						<li>七年级</li>
-						<li>八年级</li>
-						<li>九年级</li>
+						<li onclick="setdata('一年级','level1')" data-level='一年级'>一年级</li>
+						<li onclick="setdata('二年级','level2')" data-level='二年级'>二年级</li>
+						<li onclick="setdata('三年级','level3')" data-level='三年级'>三年级</li>
+						<li onclick="setdata('四年级','level4')" data-level='四年级'>四年级</li>
+						<li onclick="setdata('五年级','level5')" data-level='五年级'>五年级</li>
+						<li onclick="setdata('六年级','level6')" data-level='六年级'>六年级</li>
+						<li onclick="setdata('七年级','level7')" data-level='七年级'>七年级</li>
+						<li onclick="setdata('八年级','level8')" data-level='八年级'>八年级</li>
+						<li onclick="setdata('九年级','level9')" data-level='九年级'>九年级</li>
 					</ul>
 				</div>
 				<div id="myTabContent" class="tab-content">
-					<div class="tab-pane fade in active" id="chinese">
-						<p>语文</p>
+					<div class="tab-pane fade in active" id="chineses">
 					</div>
-					<div class="tab-pane fade" id="math">
-						<p>数学</p>
+					<div class="tab-pane fade" id="maths">
 					</div>
-					<div class="tab-pane fade" id="english">
-						<p>英语</p>
+					<div class="tab-pane fade" id="englishs">
 					</div>
-					<div class="tab-pane fade" id="interest">
-						<p>趣味课程</p>
+					<div class="tab-pane fade" id="interests">
 					</div>
 				</div>
 				<p class="redtitle">

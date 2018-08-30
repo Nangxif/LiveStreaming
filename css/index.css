@@ -15,6 +15,9 @@ body{
 	line-height: normal !important;
 	background-color: white !important;
 }
+.prism-player{
+	background-color: white !important;
+}
 /*pc端*/
 #pc{
 	margin-top: 85px;
