@@ -344,7 +344,7 @@ $(function(){
 				whichClass="语文";
 				if(video.chinese.level1.length>0){
 					for(var d=0;d<video.chinese.level1.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' id='"+video.chinese.level1[d].id+"' data-link='"+video.chinese.level1[d].link+"'><img src='"+video.chinese.level1[d].mobilePicture+"' /><p>《"+video.chinese.level1[d].className+"》——"+video.chinese.level1[d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' data-link='"+video.chinese.level1[d].link+"'><img src='"+video.chinese.level1[d].mobilePicture+"' /><p>《"+video.chinese.level1[d].className+"》——"+video.chinese.level1[d].teacher+"</p></div>");
 						$("#chineses").append(inHtm);
 					}
 				}
@@ -354,7 +354,7 @@ $(function(){
 				whichClass="数学";
 				if(video.math.level1.length>0){
 					for(var d=0;d<video.math.level1.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' id='"+video.math.level1[d].id+"' data-link='"+video.math.level1[d].link+"'><img src='"+video.math.level1[d].mobilePicture+"' /><p>《"+video.math.level1[d].className+"》——"+video.math.level1[d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' data-link='"+video.math.level1[d].link+"'><img src='"+video.math.level1[d].mobilePicture+"' /><p>《"+video.math.level1[d].className+"》——"+video.math.level1[d].teacher+"</p></div>");
 						$("#maths").append(inHtm);
 					}
 				}
@@ -364,7 +364,7 @@ $(function(){
 				whichClass="英语";
 				if(video.english.level1.length>0){
 					for(var d=0;d<video.english.level1.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' id='"+video.english.level1[d].id+"' data-link='"+video.english.level1[d].link+"'><img src='"+video.english.level1[d].mobilePicture+"' /><p>《"+video.english.level1[d].className+"》——"+video.english.level1[d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' data-link='"+video.english.level1[d].link+"'><img src='"+video.english.level1[d].mobilePicture+"' /><p>《"+video.english.level1[d].className+"》——"+video.english.level1[d].teacher+"</p></div>");
 						$("#englishs").append(inHtm);
 					}
 				}
@@ -377,7 +377,7 @@ $(function(){
 		$(".smallitem").css("display","none");
 		$("#interests").empty();
 		for(var d=0;d<video.interest.length;d++){
-			var inHtm=$("<div class='detailpic prism-player' id='"+video.interest[d].id+"' data-link='"+video.interest[d].link+"'><img src='"+video.interest[d].mobilePicture+"' /><p>《"+video.interest[d].className+"》——"+video.interest[d].teacher+"</p></div>");
+			var inHtm=$("<div class='detailpic prism-player' data-link='"+video.interest[d].link+"'><img src='"+video.interest[d].mobilePicture+"' /><p>《"+video.interest[d].className+"》——"+video.interest[d].teacher+"</p></div>");
 			$("#interests").append(inHtm);
 		}
 	})
@@ -404,7 +404,7 @@ $(function(){
 			case '语文':{
 				if(video.chinese[level].length>0){
 					for(var d=0;d<video.chinese[level].length;d++){
-						var inHtm=$("<div class='detailpic prism-player' id='"+video.chinese[level][d].id+"' data-link='"+video.chinese[level][d].link+"'><img src='"+video.chinese[level][d].mobilePicture+"' /><p>《"+video.chinese[level][d].className+"》——"+video.chinese[level][d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' data-link='"+video.chinese[level][d].link+"'><img src='"+video.chinese[level][d].mobilePicture+"' /><p>《"+video.chinese[level][d].className+"》——"+video.chinese[level][d].teacher+"</p></div>");
 						$("#chineses").append(inHtm);
 					}
 				}
@@ -413,7 +413,7 @@ $(function(){
 			case '数学':{
 				if(video.math[level].length>0){
 					for(var d=0;d<video.math[level].length;d++){
-						var inHtm=$("<div class='detailpic prism-player' id='"+video.math[level][d].id+"' data-link='"+video.math[level][d].link+"'><img src='"+video.math[level][d].mobilePicture+"' /><p>《"+video.math[level][d].className+"》——"+video.math[level][d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' data-link='"+video.math[level][d].link+"'><img src='"+video.math[level][d].mobilePicture+"' /><p>《"+video.math[level][d].className+"》——"+video.math[level][d].teacher+"</p></div>");
 						$("#maths").append(inHtm);
 					}
 				}
@@ -422,40 +422,32 @@ $(function(){
 			case '英语':{
 				if(video.english[level].length>0){
 					for(var d=0;d<video.english[level].length;d++){
-						var inHtm=$("<div class='detailpic prism-player' id='"+video.english[level][d].id+"' data-link='"+video.english[level][d].link+"'><img src='"+video.english[level][d].mobilePicture+"' /><p>《"+video.english[level][d].className+"》——"+video.english[level][d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' data-link='"+video.english[level][d].link+"'><img src='"+video.english[level][d].mobilePicture+"' /><p>《"+video.english[level][d].className+"》——"+video.english[level][d].teacher+"</p></div>");
 						$("#englishs").append(inHtm);
 					}
 				}
 				$(".prism-player").on("click",function(){
+					$("#fadebg").css("display","block");
 					var id=$(this).attr("id");
 					var player = new Aliplayer({
-				        id: id,
-				        width: '100%',
-				        autoplay: true,
-				        //支持播放地址播放,此播放优先级最高
-				        source : $(this).attr("data-link"),
-				        },function(player){
-				            console.log('播放器创建好了。')
-				       });
-					var _video = document.querySelector('video');
-					player.on('play', function(e) {
-					  _video.removeEventListener('touchend', play);
-					  _video.addEventListener('touchend', pause);
-					});
-					player.on('pause', function(e) {
-					  _video.removeEventListener('touchend', pause);
-					  _video.addEventListener('touchend', play)
-					});
-
-					function play() {
-					  if (player) player.play();
-					}
-
-					function pause() {
-					  if (player) player.pause();
-					}
+			        id: "fadebg",
+			        width: '100%',
+			        autoplay: true,
+			        //支持播放地址播放,此播放优先级最高
+			        source : $(this).attr("data-link"),
+			        },function(player){
+			            console.log('播放器创建好了。')
+			       });
+					$(".prism-player video,.prism-player .prism-controlbar,.prism-player .play-apply-animation,.prism-player .prism-big-play-btn").on("click",function(event){
+						event.stopPropagation();
+					})
+					$("#fadebg").on("click",function(){
+						player.dispose(); //销毁
+    					//$('#fadebg').empty(); //id为html里指定的播放器的容器id
+    					// $("#fadebg").css("display","none");
+    					$("body").append($("<div id='fadebg'></div>"));
+					})
 				})
-
 				break;
 			}
 		}
@@ -463,7 +455,7 @@ $(function(){
 	$(".prism-player").on("click",function(){
 		var id=$(this).attr("id");
 		var player = new Aliplayer({
-	        id: id,
+	        id: "fadebg",
 	        width: '100%',
 	        autoplay: true,
 	        //支持播放地址播放,此播放优先级最高

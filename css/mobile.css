@@ -11,12 +11,38 @@
 	margin: 0px; 
 	font-family: "Source-Han-Norm";
 }
+html,body{
+	width: 100% !important;
+	height: 100% !important;
+	overflow: auto;
+}
 body{
 	line-height: normal !important;
 	background-color: white !important;
 }
 .prism-player{
 	background-color: white !important;
+}
+#fadebg{
+	position: fixed !important;
+	top:0px !important;
+	left: 0px !important;
+	width: 100% !important;
+	height: 100% !important;
+	background-color: black !important;
+	z-index:999;
+	display: none;
+	overflow: hidden;
+}
+.prism-player .prism-big-play-btn{
+	margin:auto;
+	left: 0px !important;
+	right: 0px !important;
+	top: 0px !important;
+	bottom: 0px !important;
+}
+.prism-player video{
+	height: auto !important;
 }
 /*pc端*/
 #mobile{
