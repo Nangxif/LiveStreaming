@@ -29,10 +29,21 @@ body{
 	left: 0px !important;
 	width: 100% !important;
 	height: 100% !important;
-	background-color: black !important;
+	background-color: rgba(0,0,0,0.6) !important;
 	z-index:999;
 	display: none;
 	overflow: hidden;
+}
+#fadebgclose{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 0.5rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	text-align: center;
+	font-size: 0.4rem;
+	color: white;
 }
 .prism-player .prism-big-play-btn{
 	margin:auto;

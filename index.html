@@ -34,7 +34,7 @@
 	<script src="http://www.readboy.com/statics/js/js/plugins/html5shiv.js"></script>
 	<script src="http://www.readboy.com/statics/js/js/plugins/respond.min.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.7.2/aliplayer-h5-min.js"></script>
+	<script type="text/javascript" src="./js/aliplayer-h5-min.js"></script>
 	<script type="text/javascript" src="./js/whichmachine.js"></script>
 	<script type="text/javascript">
 	document.ondragstart = function() {
@@ -120,35 +120,35 @@
 				</p>
 				<div class="itemList">
 					<ul id="myTab" class="nav nav-tabs">
-						<li class="active"><a href="#chinese" data-toggle="tab">语文</a></li>
-						<li style="width: 17%;"><a href="#math" data-toggle="tab">数学</a></li>
-						<li style="width: 15%;"><a href="#english" data-toggle="tab">英语</a></li>
-						<li style="width: 20%;"><a href="#interest" data-toggle="tab">趣味课程</a></li>
+						<li class="active"><a href="#chinese" data-toggle="tab" class="haveLevel" data-type="chinese">语文</a></li>
+						<li style="width: 17%;"><a href="#math" data-toggle="tab" class="haveLevel" data-type="math">数学</a></li>
+						<li style="width: 15%;"><a href="#english" data-toggle="tab" class="haveLevel" data-type="english">英语</a></li>
+						<li style="width: 20%;"><a href="#interest" data-toggle="tab" class="nohaveLevel" data-type="interest">趣味课程</a></li>
 					</ul>
 					<ul class="smallitem">
-						<li class="itemactive">一年级</li>
-						<li>二年级</li>
-						<li>三年级</li>
-						<li>四年级</li>
-						<li>五年级</li>
-						<li>六年级</li>
-						<li>七年级</li>
-						<li>八年级</li>
-						<li>九年级</li>
+						<li class="itemactive" onclick="data(this,'一年级','level1')">一年级</li>
+						<li onclick="data(this,'二年级','level2')">二年级</li>
+						<li onclick="data(this,'三年级','level3')">三年级</li>
+						<li onclick="data(this,'四年级','level4')">四年级</li>
+						<li onclick="data(this,'五年级','level5')">五年级</li>
+						<li onclick="data(this,'六年级','level6')">六年级</li>
+						<li onclick="data(this,'七年级','level7')">七年级</li>
+						<li onclick="data(this,'八年级','level8')">八年级</li>
+						<li onclick="data(this,'九年级','level9')">九年级</li>
 					</ul>
 				</div>
 				<div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade in active" id="chinese">
-						<p>语文</p>
+						<div class='prevpic'><span data-num='0'></span></div><div class='piccontent'><div class='videoList'></div></div><div class='nextpic'><span data-num='1'></span></div>
 					</div>
 					<div class="tab-pane fade" id="math">
-						<p>数学</p>
+						<div class='prevpic'><span data-num='0'></span></div><div class='piccontent'><div class='videoList'></div></div><div class='nextpic'><span data-num='1'></span></div>
 					</div>
-					<div class="tab-pane fade" id="english">
-						<p>英语</p>
+					<div class="tab-pane fade" id="english">	
+						<div class='prevpic'><span data-num='0'></span></div><div class='piccontent'><div class='videoList'></div></div><div class='nextpic'><span data-num='1'></span></div>				
 					</div>
 					<div class="tab-pane fade" id="interest">
-						<p>趣味课程</p>
+						<div class='prevpic'><span data-num='0'></span></div><div class='piccontent'><div class='videoList'></div></div><div class='nextpic'><span data-num='1'></span></div>						
 					</div>
 				</div>
 				<p class="redtitle">
@@ -530,10 +530,10 @@
 				</p>
 				<div class="itemList">
 					<ul id="myTab" class="nav nav-tabs">
-						<li class="active" style="flex: 1;"><a href="#chineses" data-toggle="tab" class="hasLevel">语文</a></li>
-						<li style="flex: 1;"><a href="#maths" data-toggle="tab" class="hasLevel">数学</a></li>
-						<li style="flex: 1;"><a href="#englishs" data-toggle="tab" class="hasLevel">英语</a></li>
-						<li style="flex: 1.2;"><a href="#interests" data-toggle="tab" class="noLevel">趣味课程</a></li>
+						<li class="active" style="flex: 1;"><a href="#chineses" data-toggle="tab" class="hasLevel" data-type="chinese">语文</a></li>
+						<li style="flex: 1;"><a href="#maths" data-toggle="tab" class="hasLevel" data-type="math">数学</a></li>
+						<li style="flex: 1;"><a href="#englishs" data-toggle="tab" class="hasLevel" data-type="english">英语</a></li>
+						<li style="flex: 1.2;"><a href="#interests" data-toggle="tab" class="noLevel" data-type="interest">趣味课程</a></li>
 					</ul>
 					<div class="choosewhich"><span class="chooselevel">一年级</span><span class="chooseicon">+</span></div>
 					<ul class="smallitem">
@@ -845,7 +845,7 @@
 				</div>
 			</footer>
 		</div>
-		<div id="fadebg"></div>
+		<div id="fadebg" style="display: none;"><div id="videoContent"><div id="fadebgclose">X</div></div></div>
 
 
 
