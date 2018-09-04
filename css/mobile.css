@@ -9,7 +9,6 @@
 *{
 	padding: 0px;
 	margin: 0px; 
-	font-family: "Source-Han-Norm";
 }
 html,body{
 	width: 100% !important;
@@ -37,7 +36,7 @@ body{
 #fadebgclose{
 	position: absolute;
 	right: 0px;
-	top: 0px;
+	top: 30%;
 	width: 0.5rem;
 	height: 0.5rem;
 	line-height: 0.5rem;
@@ -65,6 +64,7 @@ body{
 }
 .mobilecontent{
 	width: 100%;
+	font-family: "Source-Han-Norm";
 }
 .redtitle{
 	margin-bottom: 0px;

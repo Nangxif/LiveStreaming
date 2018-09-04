@@ -22,7 +22,7 @@ $(function(){
 	Jump();
 	var timer=setInterval(function(){
 		Jump();
-	},4000);
+	},10000);
 	function Jump(){
 		prenum=nextnum;
 		$.get("http://api.double-teacher.dream.cn/v2/other/ordercount", { "province": "广东省", "city": "珠海市" }, function (result) {
@@ -58,16 +58,24 @@ $(function(){
 	       if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 			//控制选择菜单的消失和出现
 			var whichClass="chinese";
+			if(video.chinese.level3.length>0){
+				if(video[whichClass].level3.length>0){
+					for(var d=0;d<video[whichClass].level3.length;d++){
+						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level3[d].link+"\")'><img src='"+video[whichClass].level3[d].mobilePicture+"' /><p>《"+video[whichClass].level3[d].className+"》——"+video[whichClass].level3[d].teacher+"</p></div>");
+						$("#"+whichClass+"s").append(inHtm);
+					}
+				}
+			}
 			$(".hasLevel").on("click",function(){
 				$(".choosewhich").css("display","block");
 				$(".smallitem").slideUp();
-				$(".chooselevel").text("一年级");
+				$(".chooselevel").text("三年级");
 				$(".chooseicon").text("+");
 				$("#chineses,#maths,#englishs,#interests").empty();
 				whichClass=$(this).data("type");
-				if(video[whichClass].level1.length>0){
-					for(var d=0;d<video[whichClass].level1.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level1[d].link+"\")'><img src='"+video[whichClass].level1[d].mobilePicture+"' /><p>《"+video[whichClass].level1[d].className+"》——"+video[whichClass].level1[d].teacher+"</p></div>");
+				if(video[whichClass].level3.length>0){
+					for(var d=0;d<video[whichClass].level3.length;d++){
+						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level3[d].link+"\")'><img src='"+video[whichClass].level3[d].mobilePicture+"' /><p>《"+video[whichClass].level3[d].className+"》——"+video[whichClass].level3[d].teacher+"</p></div>");
 						$("#"+whichClass+"s").append(inHtm);
 					}
 				}
@@ -94,6 +102,8 @@ $(function(){
 			window.setdata=function(text,level){
 				$("#chineses,#maths,#englishs,#interests").empty();
 				$(".chooselevel").text(text);
+				$(".smallitem").slideUp();
+				$(".chooseicon").text("+");
 				if(video[whichClass][level].length>0){
 					for(var d=0;d<video[whichClass][level].length;d++){
 						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass][level][d].link+"\")'><img src='"+video[whichClass][level][d].mobilePicture+"' /><p>《"+video[whichClass][level][d].className+"》——"+video[whichClass][level][d].teacher+"</p></div>");
@@ -104,14 +114,14 @@ $(function(){
 		}else{ //pc端
 			//控制选择菜单的消失和出现
 			var whichClass="chinese";
-			if(video.chinese.level1.length>0){
-				if(video.chinese.level1.length>3){
+			if(video.chinese.level3.length>0){
+				if(video.chinese.level3.length>3){
 					$(".prevpic span,.nextpic span").css("display","block");
-					prevnext("chinese",video.chinese.level1);
+					prevnext("chinese",video.chinese.level3);
 				}
 				$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
-				for(var d=0;d<video.chinese.level1.length;d++){
-					var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video.chinese.level1[d].link+"\")'><img src='"+video.chinese.level1[d].pcPicture+"' /></div>");
+				for(var d=0;d<video.chinese.level3.length;d++){
+					var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video.chinese.level3[d].link+"\")'><img src='"+video.chinese.level3[d].pcPicture+"' /></div>");
 					$("#chinese>.piccontent>.videoList").append(inHtm);
 				}
 			}
@@ -124,17 +134,18 @@ $(function(){
 				for(var index=0;index<9;index++){
 					$("#pc .smallitem li").eq(index).removeClass("itemactive");
 				}
-				$("#pc .smallitem li").eq(0).addClass("itemactive");
+				$("#pc .smallitem li").eq(2).addClass("itemactive");
 				$("#chinese .videoList,#math .videoList,#english .videoList,#interest .videoList").empty();
 				whichClass=$(this).data("type");
-				if(video[whichClass].level1.length>0){
-					if(video[whichClass].level1.length>3){
+				if(video[whichClass].level3.length>0){
+					if(video[whichClass].level3.length>3){
 						$(".prevpic span,.nextpic span").css("display","block");
-						prevnext(whichClass,video[whichClass].level1);
+						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video[whichClass].level3.length+"px");
+						prevnext(whichClass,video[whichClass].level3);
 					}
 					$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
-					for(var d=0;d<video[whichClass].level1.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass].level1[d].link+"\")'><img src='"+video[whichClass].level1[d].pcPicture+"' /></div>");
+					for(var d=0;d<video[whichClass].level3.length;d++){
+						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass].level3[d].link+"\")'><img src='"+video[whichClass].level3[d].pcPicture+"' /></div>");
 						$("#"+whichClass+">.piccontent>.videoList").append(inHtm);
 					}
 				}
@@ -149,6 +160,7 @@ $(function(){
 				if(video.interest.length>0){
 					if(video.interest.length>3){
 						$(".prevpic span,.nextpic span").css("display","block");
+						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video.interest.length+"px");
 						prevnext("interest",video.interest);
 					}
 					$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
@@ -162,13 +174,16 @@ $(function(){
 
 			function prevnext(ele,data){
 				$(".prevpic span,.nextpic span").on("click",function(){
-					if($(this).data("num")==0){
-						if(Math.ceil($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))<0){
-							$("#"+ele+">.piccontent>.videoList").animate({"left":(Number($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))+Number(listWidth.slice(0,-2)))+"px"});
-						}
-					}else{
-						if($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2)>=(3-data.length)*listWidth.slice(0,-2)){
-							$("#"+ele+">.piccontent>.videoList").animate({"left":(Number($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))-Number(listWidth.slice(0,-2)))+"px"});
+					console.log($("#"+ele+">.piccontent>.videoList").is(":animated"));
+					if(!$("#"+ele+">.piccontent>.videoList").is(":animated")){
+						if($(this).data("num")==0){
+							if(Math.ceil($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))<0){
+								$("#"+ele+">.piccontent>.videoList").animate({"left":(Number($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))+Number(listWidth.slice(0,-2)))+"px"});
+							}
+						}else{
+							if(Math.floor($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))>=(3-data.length)*listWidth.slice(0,-2)){
+								$("#"+ele+">.piccontent>.videoList").animate({"left":(Number($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))-Number(listWidth.slice(0,-2)))+"px"});
+							}
 						}
 					}
 				});
@@ -185,6 +200,7 @@ $(function(){
 				if(video[whichClass][level].length>0){
 					if(video[whichClass][level].length>3){
 						$(".prevpic span,.nextpic span").css("display","block");
+						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video[whichClass][level].length+"px");
 						prevnext(whichClass,video[whichClass][level])
 					}
 					$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
@@ -210,7 +226,7 @@ $(function(){
 		$("#fadebgclose").on("click",function(){
 			player.dispose(); //销毁
 			$("#fadebgclose").unbind("click");
-			$("body").append($("<div id='fadebg'><div id='fadebgclose'>X</div></div>"));
+			$("body").append($("<div id='fadebg'><div id='fadebgclose'>×</div></div>"));
 		})
 	}
 
@@ -225,7 +241,7 @@ $(function(){
 			player.dispose(); //销毁
 			$("#fadebg").remove();
 			$("#fadebgclose").unbind("click");
-			$("body").append($("<div id='fadebg'><div id='videoContent'><div id='fadebgclose'>X</div></div></div>"));
+			$("body").append($("<div id='fadebg'><div id='videoContent'><div id='fadebgclose'>×</div></div></div>"));
 		})
 	}
 })

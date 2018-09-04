@@ -9,7 +9,6 @@
 *{
 	padding: 0px;
 	margin: 0px; 
-	font-family: "Source-Han-Norm";
 }
 body{
 	line-height: normal !important;
@@ -76,6 +75,7 @@ body{
 .pccontent{
 	margin: 0 auto;
 	width: 66.719%;
+	font-family: "Source-Han-Norm";
 }
 .redtitle{
 	margin-bottom: 0px;
@@ -211,7 +211,7 @@ body{
 }
 .smallitem li{
 	float: left;
-	margin: 0.5% 1.2%;
+	margin: 0.6% 2.1%;
 	padding: 2px 1.6%;
 	font-size: 22px;
 	color: #c1c1c1;
@@ -244,6 +244,7 @@ body{
 	position: absolute;
 	left: 0px;
 	top: 0px;
+	background-color: transparent;
 }
 .piccontent .videoList .detailpic{
 	display: inline-block;
@@ -251,6 +252,7 @@ body{
 	height: 100%;
 	overflow: hidden;
 	cursor: pointer;
+	background-color: transparent !important;
 }
 .piccontent .videoList .detailpic img{
 	position: relative;
@@ -410,7 +412,7 @@ body{
 @media screen and (max-width:2018px) and (min-width:1921px){
 	.redtitle{
 		font-size: 42px;
-		height: 44px;
+		height: 56px;
 		line-height: 44px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -465,7 +467,7 @@ body{
 @media screen and (max-width:1920px) and (min-width:1780px){	
 	.redtitle{
 		font-size: 40px;
-		height: 42px;
+		height: 53px;
 		line-height: 42px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -520,7 +522,7 @@ body{
 @media screen and (max-width:1779px) and (min-width:1620px){
 	.redtitle{
 		font-size: 38px;
-		height: 39px;
+		height: 50px;
 		line-height: 39px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -574,7 +576,7 @@ body{
 @media screen and (max-width:1619px) and (min-width:1500px){
 	.redtitle{
 		font-size: 35px;
-		height: 36px;
+		height: 47px;
 		line-height: 39px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -628,7 +630,7 @@ body{
 @media screen and (max-width:1499px) and (min-width:1324px){
 	.redtitle{
 		font-size: 32px;
-		height: 34px;
+		height: 44px;
 		line-height: 34px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -682,7 +684,7 @@ body{
 @media screen and (max-width:1323px) and (min-width:1201px){
 	.redtitle{
 		font-size: 29px;
-		height: 32px;
+		height: 41px;
 		line-height: 32px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -736,7 +738,7 @@ body{
 @media screen and (max-width:1200px) and (min-width:1098px){
 	.redtitle{
 		font-size: 27px;
-		height: 29px;
+		height: 38px;
 		line-height: 29px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -790,7 +792,7 @@ body{
 @media screen and (max-width:1097px) and (min-width:993px){
 	.redtitle{
 		font-size: 25px;
-		height: 27px;
+		height: 35px;
 		line-height: 27px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -844,7 +846,7 @@ body{
 @media screen and (max-width:992px) and (min-width:852px){
 	.redtitle{
 		font-size: 23px;
-		height: 24px;
+		height: 32px;
 		line-height: 24px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -898,7 +900,7 @@ body{
 @media screen and (max-width:851px) and (min-width:768px){
 	.redtitle{
 		font-size: 21px;
-		height: 22px;
+		height: 29px;
 		line-height: 22px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
@@ -952,7 +954,7 @@ body{
 @media screen and (max-width:767px){
 	.redtitle{
 		font-size: 19px;
-		height: 20px;
+		height: 26px;
 		line-height: 20px;
 	}
 	#people .pox:first-child, #people .pox:last-child{
