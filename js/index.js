@@ -58,10 +58,10 @@ $(function(){
 	       if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 			//控制选择菜单的消失和出现
 			var whichClass="chinese";
-			if(video.chinese.level3.length>0){
+			if(video.chinese.level3&&video.chinese.level3.length>0){
 				if(video[whichClass].level3.length>0){
 					for(var d=0;d<video[whichClass].level3.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level3[d].link+"\")'><img src='"+video[whichClass].level3[d].mobilePicture+"' /><p>《"+video[whichClass].level3[d].className+"》——"+video[whichClass].level3[d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level3[d].vid+"\")'><img src='"+video[whichClass].level3[d].mobilePicture+"' /><p>《"+video[whichClass].level3[d].className+"》——"+video[whichClass].level3[d].teacher+"</p></div>");
 						$("#"+whichClass+"s").append(inHtm);
 					}
 				}
@@ -73,9 +73,9 @@ $(function(){
 				$(".chooseicon").text("+");
 				$("#chineses,#maths,#englishs,#interests").empty();
 				whichClass=$(this).data("type");
-				if(video[whichClass].level3.length>0){
+				if(video[whichClass].level3&&video[whichClass].level3.length>0){
 					for(var d=0;d<video[whichClass].level3.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level3[d].link+"\")'><img src='"+video[whichClass].level3[d].mobilePicture+"' /><p>《"+video[whichClass].level3[d].className+"》——"+video[whichClass].level3[d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level3[d].vid+"\")'><img src='"+video[whichClass].level3[d].mobilePicture+"' /><p>《"+video[whichClass].level3[d].className+"》——"+video[whichClass].level3[d].teacher+"</p></div>");
 						$("#"+whichClass+"s").append(inHtm);
 					}
 				}
@@ -84,9 +84,11 @@ $(function(){
 				$(".choosewhich").css("display","none");
 				$(".smallitem").css("display","none");
 				$("#interests").empty();
-				for(var d=0;d<video.interest.length;d++){
-					var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video.interest[d].link+"\")'><img src='"+video.interest[d].mobilePicture+"' /><p>《"+video.interest[d].className+"》——"+video.interest[d].teacher+"</p></div>");
-					$("#interests").append(inHtm);
+				if(video.interest&&video.interest.length>0){
+					for(var d=0;d<video.interest.length;d++){
+						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video.interest[d].vid+"\")'><img src='"+video.interest[d].mobilePicture+"' /><p>《"+video.interest[d].className+"》——"+video.interest[d].teacher+"</p></div>");
+						$("#interests").append(inHtm);
+					}
 				}
 			})
 			//控制下拉菜单的下拉和收缩
@@ -104,9 +106,9 @@ $(function(){
 				$(".chooselevel").text(text);
 				$(".smallitem").slideUp();
 				$(".chooseicon").text("+");
-				if(video[whichClass][level].length>0){
+				if(video[whichClass][level]&&video[whichClass][level].length>0){
 					for(var d=0;d<video[whichClass][level].length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass][level][d].link+"\")'><img src='"+video[whichClass][level][d].mobilePicture+"' /><p>《"+video[whichClass][level][d].className+"》——"+video[whichClass][level][d].teacher+"</p></div>");
+						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass][level][d].vid+"\")'><img src='"+video[whichClass][level][d].mobilePicture+"' /><p>《"+video[whichClass][level][d].className+"》——"+video[whichClass][level][d].teacher+"</p></div>");
 						$("#"+whichClass+"s").append(inHtm);
 					}
 				}
@@ -114,14 +116,14 @@ $(function(){
 		}else{ //pc端
 			//控制选择菜单的消失和出现
 			var whichClass="chinese";
-			if(video.chinese.level3.length>0){
+			if(video.chinese.level3&&video.chinese.level3.length>0){
 				if(video.chinese.level3.length>3){
 					$(".prevpic span,.nextpic span").css("display","block");
 					prevnext("chinese",video.chinese.level3);
 				}
 				$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
 				for(var d=0;d<video.chinese.level3.length;d++){
-					var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video.chinese.level3[d].link+"\")'><img src='"+video.chinese.level3[d].pcPicture+"' /></div>");
+					var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video.chinese.level3[d].vid+"\")'><img src='"+video.chinese.level3[d].pcPicture+"' /></div>");
 					$("#chinese>.piccontent>.videoList").append(inHtm);
 				}
 			}
@@ -137,7 +139,7 @@ $(function(){
 				$("#pc .smallitem li").eq(2).addClass("itemactive");
 				$("#chinese .videoList,#math .videoList,#english .videoList,#interest .videoList").empty();
 				whichClass=$(this).data("type");
-				if(video[whichClass].level3.length>0){
+				if(video[whichClass].level3&&video[whichClass].level3.length>0){
 					if(video[whichClass].level3.length>3){
 						$(".prevpic span,.nextpic span").css("display","block");
 						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video[whichClass].level3.length+"px");
@@ -145,7 +147,7 @@ $(function(){
 					}
 					$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
 					for(var d=0;d<video[whichClass].level3.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass].level3[d].link+"\")'><img src='"+video[whichClass].level3[d].pcPicture+"' /></div>");
+						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass].level3[d].vid+"\")'><img src='"+video[whichClass].level3[d].pcPicture+"' /></div>");
 						$("#"+whichClass+">.piccontent>.videoList").append(inHtm);
 					}
 				}
@@ -157,7 +159,7 @@ $(function(){
 				$(".prevpic span,.nextpic span").unbind("click");
 				$(".prevpic span,.nextpic span").css("display","none");
 				$("#chinese .videoList,#math .videoList,#english .videoList,#interest .videoList").empty();
-				if(video.interest.length>0){
+				if(video.interest&&video.interest.length>0){
 					if(video.interest.length>3){
 						$(".prevpic span,.nextpic span").css("display","block");
 						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video.interest.length+"px");
@@ -165,7 +167,7 @@ $(function(){
 					}
 					$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
 					for(var d=0;d<video.interest.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video.interest[d].link+"\")'><img src='"+video.interest[d].pcPicture+"' /></div>");
+						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video.interest[d].vid+"\")'><img src='"+video.interest[d].pcPicture+"' /></div>");
 						$("#interest>.piccontent>.videoList").append(inHtm);
 					}
 				}
@@ -174,7 +176,6 @@ $(function(){
 
 			function prevnext(ele,data){
 				$(".prevpic span,.nextpic span").on("click",function(){
-					console.log($("#"+ele+">.piccontent>.videoList").is(":animated"));
 					if(!$("#"+ele+">.piccontent>.videoList").is(":animated")){
 						if($(this).data("num")==0){
 							if(Math.ceil($("#"+ele+">.piccontent>.videoList").css("left").slice(0,-2))<0){
@@ -197,7 +198,7 @@ $(function(){
 				$(".prevpic span,.nextpic span").unbind("click");
 				$(".prevpic span,.nextpic span").css("display","none");
 				$("#chinese .videoList,#math .videoList,#english .videoList,#interest .videoList").empty();
-				if(video[whichClass][level].length>0){
+				if(video[whichClass][level]&&video[whichClass][level].length>0){
 					if(video[whichClass][level].length>3){
 						$(".prevpic span,.nextpic span").css("display","block");
 						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video[whichClass][level].length+"px");
@@ -205,26 +206,40 @@ $(function(){
 					}
 					$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
 					for(var d=0;d<video[whichClass][level].length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass][level][d].link+"\")'><img src='"+video[whichClass][level][d].pcPicture+"' /></div>");
+						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass][level][d].vid+"\")'><img src='"+video[whichClass][level][d].pcPicture+"' /></div>");
 						$("#"+[whichClass]+">.piccontent>.videoList").append(inHtm);
 					}
 				}
 				$(".piccontent .videoList .detailpic").css("width",listWidth);
 			}
 		}
-	   },
-	   complete:function(res){
 	   }
 	})	
 	
 	window.showVideo=function(hf){
 		$("#fadebg").css("display","block");
-		var player = new Aliplayer({id: "fadebg",width: '100%',autoplay: true,source : hf,"controlBarVisibility": "always","skinLayout": [{"name": "H5Loading","align": "cc"},{"name": "errorDisplay","align": "tlabs","x": 0,"y": 0},{"name": "tooltip","align": "blabs","x": 0,"y": 56},{"name": "controlBar","align": "blabs","x": 0,"y": 0,"children": [{"name": "progress","align": "blabs","x": 0,"y": 44},{"name": "playButton","align": "tl","x": 15,"y": 12},{"name": "timeDisplay","align": "tl","x": 10,"y": 7}]}]
+		var player = new Aliplayer({
+			"id": "fadebg",
+			"vid": hf,
+			"accessKeyId": AccessKeyId,
+			"securityToken": SecurityToken,
+			"accessKeySecret": AccessKeySecret,
+			"format": "m3u8",
+			"mediaType": "video",
+			"width": "100%",
+			"autoplay": true,
+			"isLive": false,
+			"rePlay": false,
+			"playsinline": true,
+			"preload": true,
+			"controlBarVisibility": "hover",
+			"useH5Prism": true
         },function(player){
             console.log('播放器创建好了。')
        	});
 		$("#fadebgclose").on("click",function(){
 			player.dispose(); //销毁
+			$("#fadebg").remove();
 			$("#fadebgclose").unbind("click");
 			$("body").append($("<div id='fadebg'><div id='fadebgclose'>×</div></div>"));
 		})
@@ -232,8 +247,22 @@ $(function(){
 
 	window.showpcVideo=function(hf){
 		$("#fadebg").css("display","block");
-		var player = new Aliplayer({id: "videoContent",width: '684px',autoplay: true,source : hf,"controlBarVisibility": "always",
-	        "skinLayout": [{"name": "bigPlayButton","align": "blabs","x": 30,"y": 80},{"name": "H5Loading","align": "cc"},{"name": "errorDisplay","align": "tlabs","x": 0,"y": 0},{"name": "infoDisplay"},{"name": "tooltip","align": "blabs","x": 0,"y": 56},{"name": "thumbnail"},{"name": "controlBar","align": "blabs","x": 0,"y": 0,"children": [{"name": "progress","align": "blabs","x": 0,"y": 44},{"name": "playButton","align": "tl","x": 15,"y": 12},{"name": "timeDisplay","align": "tl","x": 10,"y": 7},{"name": "fullScreenButton","align": "tr","x": 10,"y": 12},{"name": "volume","align": "tr","x": 5,"y": 10}]}]
+		var player = new Aliplayer({
+	        "id": "videoContent",
+			"vid": hf,
+			"accessKeyId": AccessKeyId,
+			"securityToken": SecurityToken,
+			"accessKeySecret": AccessKeySecret,
+			"format": "m3u8",
+			"mediaType": "video",
+			"width": "684px",
+			"autoplay": true,
+			"isLive": false,
+			"rePlay": false,
+			"playsinline": true,
+			"preload": true,
+			"controlBarVisibility": "hover",
+			"useH5Prism": true
         },function(player){
             console.log('播放器创建好了。')
        	});
