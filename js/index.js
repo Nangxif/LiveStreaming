@@ -58,6 +58,7 @@ $(function(){
 	       if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 			//控制选择菜单的消失和出现
 			var whichClass="chinese";
+			sessionStorage.setItem('target',"level3");
 			if(video.chinese.level3&&video.chinese.level3.length>0){
 				if(video[whichClass].level3.length>0){
 					for(var d=0;d<video[whichClass].level3.length;d++){
@@ -69,13 +70,14 @@ $(function(){
 			$(".hasLevel").on("click",function(){
 				$(".choosewhich").css("display","block");
 				$(".smallitem").slideUp();
-				$(".chooselevel").text("三年级");
+				var l=sessionStorage.getItem('target');
+				$(".chooselevel").text(["一","二","三","四","五","六","七","八","九"][Number(l.charAt(5))-1]+"年级");
 				$(".chooseicon").text("+");
 				$("#chineses,#maths,#englishs,#interests").empty();
 				whichClass=$(this).data("type");
-				if(video[whichClass].level3&&video[whichClass].level3.length>0){
-					for(var d=0;d<video[whichClass].level3.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass].level3[d].vid+"\")'><img src='"+video[whichClass].level3[d].mobilePicture+"' /><p>《"+video[whichClass].level3[d].className+"》——"+video[whichClass].level3[d].teacher+"</p></div>");
+				if(video[whichClass][l]&&video[whichClass][l].length>0){
+					for(var d=0;d<video[whichClass][l].length;d++){
+						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass][l][d].vid+"\")'><img src='"+video[whichClass][l][d].mobilePicture+"' /><p>《"+video[whichClass][l][d].className+"》——"+video[whichClass][l][d].teacher+"</p></div>");
 						$("#"+whichClass+"s").append(inHtm);
 					}
 				}
@@ -106,6 +108,7 @@ $(function(){
 				$(".chooselevel").text(text);
 				$(".smallitem").slideUp();
 				$(".chooseicon").text("+");
+				sessionStorage.setItem('target',level);
 				if(video[whichClass][level]&&video[whichClass][level].length>0){
 					for(var d=0;d<video[whichClass][level].length;d++){
 						var inHtm=$("<div class='detailpic prism-player' onclick='showVideo(\""+video[whichClass][level][d].vid+"\")'><img src='"+video[whichClass][level][d].mobilePicture+"' /><p>《"+video[whichClass][level][d].className+"》——"+video[whichClass][level][d].teacher+"</p></div>");
@@ -116,6 +119,7 @@ $(function(){
 		}else{ //pc端
 			//控制选择菜单的消失和出现
 			var whichClass="chinese";
+			sessionStorage.setItem('target',"level3");
 			if(video.chinese.level3&&video.chinese.level3.length>0){
 				if(video.chinese.level3.length>3){
 					$(".prevpic span,.nextpic span").css("display","block");
@@ -136,18 +140,19 @@ $(function(){
 				for(var index=0;index<9;index++){
 					$("#pc .smallitem li").eq(index).removeClass("itemactive");
 				}
-				$("#pc .smallitem li").eq(2).addClass("itemactive");
+				var l=sessionStorage.getItem('target');
+				$("#pc .smallitem li").eq(Number(l.charAt(5))-1).addClass("itemactive");
 				$("#chinese .videoList,#math .videoList,#english .videoList,#interest .videoList").empty();
 				whichClass=$(this).data("type");
-				if(video[whichClass].level3&&video[whichClass].level3.length>0){
-					if(video[whichClass].level3.length>3){
+				if(video[whichClass][l]&&video[whichClass][l].length>0){
+					if(video[whichClass][l].length>3){
 						$(".prevpic span,.nextpic span").css("display","block");
-						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video[whichClass].level3.length+"px");
-						prevnext(whichClass,video[whichClass].level3);
+						$(".piccontent .videoList").css("width",listWidth.slice(0,-2)*video[whichClass][l].length+"px");
+						prevnext(whichClass,video[whichClass][l]);
 					}
 					$(".prevpic,.piccontent,.nextpic").css("padding-top","37.5038%");
-					for(var d=0;d<video[whichClass].level3.length;d++){
-						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass].level3[d].vid+"\")'><img src='"+video[whichClass].level3[d].pcPicture+"' /></div>");
+					for(var d=0;d<video[whichClass][l].length;d++){
+						var inHtm=$("<div class='detailpic prism-player' onclick='showpcVideo(\""+video[whichClass][l][d].vid+"\")'><img src='"+video[whichClass][l][d].pcPicture+"' /></div>");
 						$("#"+whichClass+">.piccontent>.videoList").append(inHtm);
 					}
 				}
@@ -193,6 +198,7 @@ $(function(){
 				for(var index=0;index<9;index++){
 					$("#pc .smallitem li").eq(index).removeClass("itemactive");
 				}
+				sessionStorage.setItem('target',level);
 				$(that).addClass("itemactive");
 				$(".prevpic,.piccontent,.nextpic").css("padding-top","0%");
 				$(".prevpic span,.nextpic span").unbind("click");
