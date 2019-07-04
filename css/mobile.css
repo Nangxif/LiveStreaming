@@ -103,6 +103,21 @@ body{
 	display: flex;
 	justify-content:center;
 }
+#peoples>span{
+	position: relative;
+	left: -0.5%;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+	background-image: url('../images/pc/2.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#peoples>span>span{
+	position: absolute;
+	bottom: 15%;
+}
 .pox{
 	display: inline-block;
 	width: 31px;
@@ -123,26 +138,26 @@ body{
 	text-align: center;
 	color: white;
 	font-weight: 600;
-	border-right:1px solid #c25055;
 	overflow: hidden;
 }
+
 .poxsList{
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	width: 30px;
+	width: 29px;
 	height: 300px;
 	line-height: 30px;
 	color: white;
 	font-weight: 600;
-	font-size: 29px;
+	font-size: 30px;
 	word-wrap:break-word; 
 	word-break:normal;
 }
 #peoples .pox:first-child .poxsList{
 	left: 18%;
 }
-#peoples .pox:first-child,#peoples .pox:last-child{
+#peoples .pox:first-child,#peoples .pox:nth-last-child(1){
 	width: 35px;
 }
 #peoples .pox:first-child{
@@ -150,12 +165,12 @@ body{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
-#peoples .pox:last-child{
+#peoples .pox:nth-last-child(1){
 	background-image: url('../images/mobile/3.png'); 
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
-#peoples .pox:last-child .poxs{
+#peoples .pox:nth-last-child(1) .poxs{
 	border-right:0px;
 }
 

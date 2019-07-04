@@ -32,7 +32,16 @@ $(function(){
 			if(originLength!=nextnum.toString().length){
 				$("#people,#peoples").empty();
 				for(var i=0;i<nextnum.toString().length;i++){
-					var html=$("<div class='pox'><div class='poxs'><div class='poxsList'>0123456789</div></div></div>");
+					var html;
+					if((i+1)%3==1){
+						if(i!=nextnum.toString().length-1){
+							html =$("<div class='pox'><div class='poxs'><div class='poxsList'>0123456789</div></div></div><span><span>,</span></span>");
+						}else{
+							html=$("<div class='pox'><div class='poxs'><div class='poxsList'>0123456789</div></div></div>");
+						}
+					}else{
+						html=$("<div class='pox'><div class='poxs'><div class='poxsList'>0123456789</div></div></div>");
+					}
 					$("#people,#peoples").append(html);
 					lineH=$(".poxs").height();
 					$('#people>.pox').eq(i).find(".poxsList").animate({'top':(-nextnumArr[i]*lineH)+'px'});

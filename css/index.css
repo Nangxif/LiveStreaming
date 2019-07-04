@@ -116,6 +116,7 @@ body{
 	margin-bottom: 4.6863%;
 	display: flex;
 	justify-content:center;
+	overflow: hidden;
 }
 .pox{
 	display: inline-block;
@@ -138,7 +139,6 @@ body{
 	text-align: center;
 	color: white;
 	font-weight: 600;
-	border-right:1px solid #c25055;
 	overflow: hidden;
 }
 .poxsList{
@@ -154,10 +154,25 @@ body{
 	word-wrap:break-word; 
 	word-break:normal;
 }
+#people>span{
+	position: relative;
+	left: -0.5%;
+	display: inline-block;
+	font-size: 60px;
+	font-weight: 800;
+	color: white;
+	background-image: url('../images/pc/2.png'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#people>span>span{
+	position: absolute;
+	bottom: 15%;
+}
 #people .pox:first-child .poxsList{
 	left: 18%;
 }
-#people .pox:first-child,#people .pox:last-child{
+#people .pox:first-child,#people .pox:nth-last-child(1){
 	width: 124px;
 }
 #people .pox:first-child{
@@ -165,12 +180,12 @@ body{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
-#people .pox:last-child{
+#people .pox:nth-last-child(1){
 	background-image: url('../images/pc/3.png'); 
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
-#people .pox:last-child .poxs{
+#people .pox:nth-last-child(1) .poxs{
 	border-right:0px;
 }
 
@@ -415,7 +430,7 @@ body{
 		height: 56px;
 		line-height: 44px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 132px;
 	}
 	.pox{
@@ -432,6 +447,9 @@ body{
 		font-size: 110px;
 		height: 1080px;
 		line-height: 108px;
+	}
+	#people>span{
+		font-size: 62px;
 	}
 	.peopletitl{
 		font-size: 32px;
@@ -470,7 +488,7 @@ body{
 		height: 53px;
 		line-height: 42px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 124px;
 	}
 	.pox{
@@ -487,6 +505,9 @@ body{
 		font-size: 104px;
 		height: 1020px;
 		line-height: 102px;
+	}
+	#people>span{
+		font-size: 60px;
 	}
 	.peopletitl{
 		font-size: 30px;
@@ -525,7 +546,7 @@ body{
 		height: 50px;
 		line-height: 39px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 114px;
 	}
 	.pox{
@@ -542,6 +563,9 @@ body{
 		font-size: 98px;
 		height: 960px;
 		line-height: 96px;
+	}
+	#people>span{
+		font-size: 58px;
 	}
 	.peopletitl{
 		font-size: 29px;
@@ -579,7 +603,7 @@ body{
 		height: 47px;
 		line-height: 39px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 107px;
 	}
 	.pox{
@@ -596,6 +620,9 @@ body{
 		font-size: 92px;
 		height: 900px;
 		line-height: 90px;
+	}
+	#people>span{
+		font-size: 56px;
 	}
 	.peopletitl{
 		font-size: 28px;
@@ -633,7 +660,7 @@ body{
 		height: 44px;
 		line-height: 34px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 100px;
 	}
 	.pox{
@@ -650,6 +677,9 @@ body{
 		font-size: 86px;
 		height: 840px;
 		line-height: 84px;
+	}
+	#people>span{
+		font-size: 54px;
 	}
 	.peopletitl{
 		font-size: 26px;
@@ -687,7 +717,7 @@ body{
 		height: 41px;
 		line-height: 32px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 92px;
 	}
 	.pox{
@@ -704,6 +734,9 @@ body{
 		font-size: 80px;
 		height: 770px;
 		line-height: 77px;
+	}
+	#people>span{
+		font-size: 52px;
 	}
 	.peopletitl{
 		font-size: 24px;
@@ -741,7 +774,7 @@ body{
 		height: 38px;
 		line-height: 29px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 84px;
 	}
 	.pox{
@@ -758,6 +791,9 @@ body{
 		font-size: 75px;
 		height: 700px;
 		line-height: 70px;
+	}
+	#people>span{
+		font-size: 50px;
 	}
 	.peopletitl{
 		font-size: 22px;
@@ -795,7 +831,7 @@ body{
 		height: 35px;
 		line-height: 27px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 79px;
 	}
 	.pox{
@@ -812,6 +848,9 @@ body{
 		font-size: 70px;
 		height: 630px;
 		line-height: 63px;
+	}
+	#people>span{
+		font-size: 48px;
 	}
 	.peopletitl{
 		font-size: 20px;
@@ -849,7 +888,7 @@ body{
 		height: 32px;
 		line-height: 24px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 71px;
 	}
 	.pox{
@@ -866,6 +905,9 @@ body{
 		font-size: 60px;
 		height: 560px;
 		line-height: 56px;
+	}
+	#people>span{
+		font-size: 46px;
 	}
 	.peopletitl{
 		font-size: 18px;
@@ -903,7 +945,7 @@ body{
 		height: 29px;
 		line-height: 22px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 63px;
 	}
 	.pox{
@@ -920,6 +962,9 @@ body{
 		font-size: 53px;
 		height: 490px;
 		line-height: 49px;
+	}
+	#people>span{
+		font-size: 44px;
 	}
 	.peopletitl{
 		font-size: 16px;
@@ -957,7 +1002,7 @@ body{
 		height: 26px;
 		line-height: 20px;
 	}
-	#people .pox:first-child, #people .pox:last-child{
+	#people .pox:first-child, #people .pox:nth-last-child(1){
 		width: 55px;
 	}
 	.pox{
@@ -974,6 +1019,9 @@ body{
 		font-size: 46px;
 		height: 420px;
 		line-height: 42px;
+	}
+	#people>span{
+		font-size: 42px;
 	}
 	.peopletitl{
 		font-size: 14px;
